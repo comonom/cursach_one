@@ -1,0 +1,7 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    
+    <BitmapImage x:Key="logoText" UriSource="/Resources/ss-logo-text-white.png" />
+    <BitmapImage x:Key="logoSymbol" UriSource="/Resources/ss-logo-symbol-blue.png" />
+    
+</ResourceDictionary>

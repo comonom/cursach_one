@@ -1,0 +1,26 @@
+﻿<Window x:Class="Simbirsoft.Windows.EditCustomersWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Simbirsoft.Windows"
+        mc:Ignorable="d"
+         Title="Редактирование" Height="450" Width="500"
+        FontSize="27"
+        FontFamily="PT Root"
+         Background="White">
+    <Grid>
+        <StackPanel Width="300" VerticalAlignment="Center">
+            <TextBlock Text="Компания" />
+            <TextBox x:Name="Company" Text="{Binding NameCompany}" />
+            <TextBlock Text="Адрес" />
+            <TextBox x:Name="Address" Text="{Binding Address}" />
+            <TextBlock Text="БИК" />
+            <TextBox x:Name="BIK" Text="{Binding BIK}"/>
+            <TextBlock Text="ИНН" />
+            <TextBox x:Name="INN" Text="{Binding INN}"/>
+
+            <Button Content="Сохранить" Click="Button_ClickSave" Margin="0 15 0 0" Style="{StaticResource btnPrimary}"/>
+        </StackPanel>
+    </Grid>
+</Window>

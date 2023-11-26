@@ -1,0 +1,22 @@
+﻿<Window x:Class="Simbirsoft.Windows.EditTypeServiceWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Simbirsoft.Windows"
+        mc:Ignorable="d"
+         Title="Редактирование" Height="450" Width="500"
+        FontSize="27"
+        FontFamily="PT Root"
+         Background="White">
+    <Grid>
+        <StackPanel Width="300" VerticalAlignment="Center">
+            <TextBlock Text="Название" />
+            <TextBox x:Name="Name" Text="{Binding Name}" />
+            <TextBlock Text="Описание"/>
+            <TextBox x:Name="Description" Height="100" TextWrapping="Wrap" FontSize="20" Text="{Binding Description}" />
+
+            <Button Content="Сохранить" Margin="0 15 0 0" Style="{StaticResource btnPrimary}" Click="Button_ClickSave"/>
+        </StackPanel>
+    </Grid>
+</Window>
