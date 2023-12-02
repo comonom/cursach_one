@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using Simbirsoft.Properties;
 using System;
 using System.Collections.Generic;
@@ -32,13 +33,8 @@ namespace Simbirsoft.entities
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            var userId = Settings.Default.db_user;
-            var password = Settings.Default.db_pass;
-            var database = Settings.Default.db_name;
-            var server = Settings.Default.db_server;
-
-            optionsBuilder.UseMySql($"user Id={userId}; password={password}; database={database}; server={server}; charset=utf-8",
-                new MySqlServerVersion("8.0.33"));
+            optionsBuilder.UseMySql(App.Configuration.GetConnectionString("db"),
+                new MySqlServerVersion(App.Configuration.GetSection("versionMySql").Value));
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

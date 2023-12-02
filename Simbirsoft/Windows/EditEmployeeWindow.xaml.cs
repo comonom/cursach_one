@@ -1,6 +1,7 @@
 ﻿using Simbirsoft.entities;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,6 +22,7 @@ namespace Simbirsoft.Windows
     public partial class EditEmployeeWindow : Window
     {
         private Employee _employee;
+        private string _lastLogin;
         public EditEmployeeWindow(Employee employee)
         {
             InitializeComponent();
@@ -31,6 +33,7 @@ namespace Simbirsoft.Windows
             {
                 Password.Visibility = Visibility.Collapsed;
                 textBlockPass.Visibility = Visibility.Collapsed;
+                _lastLogin = employee.Login;
             }
 
             this.DataContext = employee;
@@ -47,7 +50,8 @@ namespace Simbirsoft.Windows
                 return;
             }
 
-            if (ModelContext.Instance.Employees.Any(e => e.Login == _employee.Login))
+            if (_employee.Login != _lastLogin &&
+                ModelContext.Instance.Employees.Any(e => e.Login == _employee.Login))
             {
                 MessageBox.Show("Пользователь с таким логином уже существует!");
                 return;
