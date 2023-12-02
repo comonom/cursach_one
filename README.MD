@@ -7,9 +7,9 @@
 Пример конфигурации в appsettings.json (или secrets.json при работе с UserSecrets):
 ``` json
 {
-	"ConnectionString": {
-		"db": "server=localhost;user id=admin;password=admin123;database=simbirsoft"
-	}
+  "ConnectionString": {
+    "db": "server=localhost;user id=admin;password=admin123;database=simbirsoft"
+  }
 }
 ```
 
