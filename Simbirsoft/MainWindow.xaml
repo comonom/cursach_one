@@ -7,7 +7,9 @@
         mc:Ignorable="d"
         Title="SimbirSoft" Height="450" Width="800"
         Icon="/icon.ico"
-        FontFamily="Cambria">
+        FontFamily="Cambria"
+        MinHeight="450"
+        MinWidth="800">
     <Grid>
         <Frame x:Name="frameMain" NavigationUIVisibility="Hidden" Grid.ColumnSpan="2" />
     </Grid>
