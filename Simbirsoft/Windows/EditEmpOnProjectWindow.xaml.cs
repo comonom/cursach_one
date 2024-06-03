@@ -58,6 +58,13 @@ namespace Simbirsoft.Windows
             if(_empOnProject.DateEnd < _empOnProject.DateStart)
             {
                 MessageBox.Show("Дата конца должна быть позже даты начала!");
+                return;
+            }
+
+            if(ModelContext.Instance.EmployeeOnProjects.Any(f => f.ProjectId == _empOnProject.ProjectId && f.EmpolyeeId == _empOnProject.Employee.Id))
+            {
+                MessageBox.Show("Такой сотрудник уже добавлен на проект");
+                return;
             }
 
             if (_empOnProject.EmpolyeeId == 0)
