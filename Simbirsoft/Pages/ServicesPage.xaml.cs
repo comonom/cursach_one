@@ -1,8 +1,11 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Simbirsoft.DocumentGenerators;
 using Simbirsoft.entities;
 using Simbirsoft.Windows;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -88,6 +91,11 @@ namespace Simbirsoft.Pages
                 await ModelContext.Instance.SaveChangesAsync();
                 Refresh();
             }
+        }
+
+        private async void Button_Click_Otchet(object sender, RoutedEventArgs e)
+        {
+            new DocumentSettings().ShowDialog();
         }
     }
 }

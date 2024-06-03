@@ -40,10 +40,12 @@
                 <ColumnDefinition/>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
+                <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <Button Content="Добавить" Style="{StaticResource btnPrimary}" Grid.Column="0" Click="Button_Click_AddServices" />
             <Button Content="Изменить" Style="{StaticResource btnPrimary}" Grid.Column="1" Click="Button_Click_ChangeServices"/>
             <Button Content="Удалить"  Style="{StaticResource btnPrimary}" Grid.Column="2" Click="Button_Click_DeleteService"/>
+            <Button Content="Отчёт"  Style="{StaticResource btnPrimary}" Grid.Column="4" Click="Button_Click_Otchet"/>
         </Grid>
     </Grid>
 </Page>
